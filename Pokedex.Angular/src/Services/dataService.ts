@@ -6,7 +6,7 @@
 import { MockData } from "../Types/mockData";
 
 export class DataService {
-    public data : MockData[] = [
+    public static data : MockData[] = [
         {
             number : 4,
             name : 'gigi pethot',

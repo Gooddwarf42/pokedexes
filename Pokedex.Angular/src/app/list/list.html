@@ -1,1 +1,4 @@
-<p>list works!</p>
+<p>list works! {{ data.length }}</p>
+@for (item of data; track $index) {
+    <app-list-item [data]="item"></app-list-item>
+}
