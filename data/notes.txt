@@ -1,0 +1,3 @@
+This comes from
+https://github.com/Purukitto/pokemon-data.json
+credit where credit's due
