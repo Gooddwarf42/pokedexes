@@ -1,4 +1,3 @@
-
 import { Component, input } from '@angular/core';
 import { MockData } from '../../../Types/mockData';
 import { DataService } from '../../../Services/dataService';

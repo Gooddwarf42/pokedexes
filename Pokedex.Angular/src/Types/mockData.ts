@@ -4,6 +4,7 @@ export interface MockData {
     address : Address
 }
 
+// not even exported. Can only be constructed via the factory
 interface Address{
     road: string,
     city : string,
