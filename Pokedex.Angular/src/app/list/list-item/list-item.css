@@ -1,5 +1,3 @@
-
-    :host {
-      display: block; /* This makes the component behave like a normal div */
-    }
-  
+:host {
+  display: block; /* This makes the component behave like a normal div */
+}
