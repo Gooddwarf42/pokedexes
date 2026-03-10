@@ -6,17 +6,16 @@
 import {  createAddress, MockData } from "../Types/mockData";
 
 export class DataService {
-    public static data : MockData[] = [
-        {
-            number : 4,
-            name : 'gigi pethot',
-            address: createAddress('Via dei fanciulli', 4, 'Garganello')
-        },
-        {
-            number : 6,
-            name : 'andrew ronk',
-            address: createAddress('Via dal Progetto', 44, 'Varnese')
-        }
-    ]
-
+  public static data: MockData[] = [
+    {
+      number: 4,
+      name: 'gigi pethot',
+      address: createAddress('Via dei fanciulli', 4, 'Garganello'),
+    },
+    {
+      number: 6,
+      name: 'andrew ronk',
+      address: createAddress('Via dal Progetto', 44, 'Varnese'),
+    },
+  ];
 }
