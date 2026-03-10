@@ -1,4 +1,17 @@
-<p>list works! {{ data.length }}</p>
-@for (item of data; track $index) {
-    <app-list-item [data]="item"></app-list-item>
-}
+<div class="max-w-4xl mx-auto my-4 md:my-8 overflow-hidden bg-white md:border md:border-slate-200 md:rounded-xl md:shadow-sm">
+  
+  <div class="hidden md:grid grid-cols-3 gap-4 px-6 py-4 bg-slate-50 border-b border-slate-200 text-sm font-semibold text-slate-700 uppercase tracking-wider">
+    <span>Number</span>
+    <span>Name</span>
+    <span>Address</span>
+  </div>
+
+
+  <div class="divide-y divide-slate-100">
+    @for (item of data; track $index) {
+      <app-list-item [data]="item"></app-list-item>
+    } @empty {
+      <div class="p-8 text-center text-slate-400">No items found.</div>
+    }
+  </div>
+</div>
