@@ -1,12 +1,14 @@
-import { JsonPipe } from '@angular/common';
+
 import { Component, input } from '@angular/core';
+import { MockData } from '../../../Types/mockData';
+import { DataService } from '../../../Services/dataService';
 
 @Component({
   selector: 'app-list-item',
-  imports: [JsonPipe],
+  imports: [],
   templateUrl: './list-item.html',
   styleUrl: './list-item.css',
 })
-export class ListItem<T> {
-  public data = input.required<T>();
+export class ListItem {
+  public data = input.required<MockData>();
 }

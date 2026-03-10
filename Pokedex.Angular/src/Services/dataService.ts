@@ -3,27 +3,19 @@
 // Ideally in the future I may want to do it... better? idk
 // I wonder if one can avoid a class
 
-import { MockData } from "../Types/mockData";
+import {  createAddress, MockData } from "../Types/mockData";
 
 export class DataService {
     public static data : MockData[] = [
         {
             number : 4,
             name : 'gigi pethot',
-            address : {
-                city: 'Garganello',
-                road: 'via dei fanciulli',
-                number: 4
-            }
+            address: createAddress('Via dei fanciulli', 4, 'Garganello')
         },
         {
             number : 6,
             name : 'andrew ronk',
-            address : {
-                city: 'Varnese',
-                road: 'via dal progetto',
-                number: 44
-            }
+            address: createAddress('Via dal Progetto', 44, 'Varnese')
         }
     ]
 

@@ -4,8 +4,22 @@ export interface MockData {
     address : Address
 }
 
-export interface Address{
+interface Address{
     road: string,
     city : string,
-    number : number
+    number : number,
+    toString(): string
+    readonly __brand: "Address"
 }
+
+export const createAddress = (
+    road: string,
+    number: number,
+    city: string
+): Address => ({
+    road,
+    number,
+    city,
+    __brand: "Address",
+    toString() { return `${road} ${number}, ${city}`}
+})
