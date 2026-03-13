@@ -2,11 +2,10 @@ import { Component, computed, input, signal, Signal, WritableSignal } from '@ang
 import { MockData } from '../../Types/mockData';
 import { DataService } from '../../Services/dataService';
 import { ListItem } from './list-item/list-item';
-import { JsonPipe } from '@angular/common';
 
 @Component({
   selector: 'app-list',
-  imports: [ListItem, JsonPipe],
+  imports: [ListItem],
   templateUrl: './list.html',
   styleUrl: './list.css',
 })
@@ -28,6 +27,8 @@ export class List {
     this.sortInfo.update((value) => this.updateSortInfo(value, columnName));
   }
 
+  // oooh qui sarebbe bellissimo se si potesse curryficare, così passando solo il columnName 
+  // ho effettivamente una function SortInfo -> SortInfo da passare all'Update per il signal!
   private updateSortInfo(value: SortInfo, columnName: ColumnName): SortInfo {
     if (value.columnName !== columnName) {
       return { columnName: columnName, sortedDesc: false };
